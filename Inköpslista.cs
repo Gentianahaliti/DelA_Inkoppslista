@@ -36,4 +36,13 @@ class InkopsLista
 
         Console.Write("\nSkriv varunamn eller nummer (eller 'exit'): ");  
         // Programmet skriver en fråga till användaren.
-        
+       }
+
+    static void LäggTillVara(string namn, List<string> names, List<int> prices)
+    // Den här metoden lägger till en ny vara i listan.
+    // namn = det användaren skrev (t.ex. "Mjölk")
+    // names = listan med varunamn
+    // prices = listan med priser
+    {
+        Console.Write("Skriv pris för varan: ");
+        // Programmet frågar användaren vad varan kostar.

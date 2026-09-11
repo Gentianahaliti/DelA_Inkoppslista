@@ -116,3 +116,37 @@ class InkopsLista
             // Paus så användaren hinner läsa.
         }
     }
+
+    static void VisaLista(List<string> names, List<int> prices)
+    // Den här metoden skriver ut hela listan och räknar ut totalsumman.
+    {
+        Console.WriteLine("Inköpslista:");
+        // Skriver rubriken så det blir tydligt vad som visas.
+
+        if (names.Count == 0)
+        {
+            Console.WriteLine("Listan är tom.");
+            // Om det inte finns några varor → skriv ut att listan är tom.
+            return;
+        }
+
+        int total = 0;
+        // Här sparar jag totalsumman. Jag börjar på 0 och lägger till varje pris.
+
+        for (int i = 0; i < names.Count; i++)
+        // En for-loop går igenom listan steg för steg.
+        // i är index → alltså platsen i listan.
+        // i = 0 betyder första varan, i = 1 andra varan, osv.
+        {
+            Console.WriteLine($"{i}: {names[i]} - {prices[i]} kr");
+            // Skriver ut varje vara med sitt index och pris.
+            // Exempel: "0: Mjölk - 15 kr"
+
+            total += prices[i];
+            // Lägger till priset i totalsumman.
+        }
+
+        Console.WriteLine($"\nTotalt: {total} kr");
+        // Skriver ut totalsumman efter att loopen är klar.
+    }
+}

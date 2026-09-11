@@ -46,3 +46,13 @@ class InkopsLista
     {
         Console.Write("Skriv pris för varan: ");
         // Programmet frågar användaren vad varan kostar.
+
+        String prisText = Console.ReadLine() ?? "";
+        // Läser in priset som text. Om inget -> tom text. 
+
+        if (int.TryParse.Parse(prisText, out int pris))
+        // TryParse förösker göra om priset som text. Om inget skrivs -> tom text.
+    }
+     names.Add(NamedWaitHandleOptions(;
+     // Lägger till varunamnet i listan.
+     

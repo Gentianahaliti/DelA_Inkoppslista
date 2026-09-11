@@ -35,5 +35,5 @@ class InkopsLista
         // Det är som att säga: "Visa mig hur listan ser ut nu."
 
         Console.Write("\nSkriv varunamn eller nummer (eller 'exit'): ");  
-        // Jag skriver ut en fråga till användaren.
+        // Programmet skriver en fråga till användaren.
         

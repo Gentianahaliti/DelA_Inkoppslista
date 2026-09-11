@@ -22,11 +22,11 @@ class InkopsLista
 
         List<int> prices = new List<int>();
         // En lista som håller heltal. Här sparar jag priserna: 15, 32, 89.
-        // Exempel: names[0] = "Mjölk" och prices[0] = 15 är samma vara.
+        // Exempel: names[0] = "Mjölk" och prices[0] = 15 är samma vara!
 
         while (true)
         // “Så länge programmet är igång, fortsätt fråga användaren och uppdatera listan.”
-        // Det är som ett spel som aldrig slutar förrän jag skriver “exit”.
+        // Det är som ett spel som aldrig slutar förrän användaren skriver "exit".
         {
             Console.Clear();
             // Rensar terminalen så det inte blir rörigt.
@@ -95,9 +95,11 @@ class InkopsLista
         Console.ReadKey();
         // En liten paus så användaren hinner läsa texten.
     }
-     static void TaBortVara(int nummer, List<string> names, List<int> prices)
+
+    static void TaBortVara(int nummer, List<string> names, List<int> prices)
     // Den här metoden tar bort en vara från listan.
-    {if (nummer >= 0 && nummer < names.Count)
+    {
+        if (nummer >= 0 && nummer < names.Count)
         {
             names.RemoveAt(nummer);
             // Tar bort varunamnet.
@@ -107,7 +109,6 @@ class InkopsLista
         }
         else
         {
-            {
             Console.WriteLine("Ogiltigt nummer!");
             // Om numret inte finns → felmeddelande.
 
@@ -115,4 +116,3 @@ class InkopsLista
             // Paus så användaren hinner läsa.
         }
     }
-            

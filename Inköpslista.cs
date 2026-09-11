@@ -11,8 +11,16 @@ class InkopsLista
 // En klass är som en behållare där jag lägger all kod som hör ihop.
 // Här ligger hela mitt program.
 {
-    static void Main()  
+    static void Main()
     // Detta är startpunkten. När jag kör programmet börjar C# här.
     {
+                List<string> names = new List<string>();  
+        // En lista som håller text. Här sparar jag varunamnen: "Mjölk", "Bröd", "Ost".
+        // Varje vara har samma index i båda listorna.// Index betyder "platsen i listan". Listor börjar alltid på 0.
+        // Det betyder: names[0] och prices[0] hör ihop som två kolumner i ett Excel-ark.
+
+        List<int> prices = new List<int>();  
+        // En lista som håller heltal. Här sparar jag priserna: 15, 32, 89.
+        // Exempel: names[0] = "Mjölk" och prices[0] = 15 är samma vara.
     }
 }

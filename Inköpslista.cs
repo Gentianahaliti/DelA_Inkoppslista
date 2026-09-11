@@ -7,7 +7,7 @@ using System.Collections.Generic;
 // Listor är som flexibla lådor där jag kan lägga in saker och ta bort saker.
 // Detta behöver jag för att kunna skapa List<string> och List<int>.
 
-class Inkoppslista
+class InkopsLista
 // En klass är som en behållare där jag lägger all kod som hör ihop.
 // Här ligger hela mitt program.
 {

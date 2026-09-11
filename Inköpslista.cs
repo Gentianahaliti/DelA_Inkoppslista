@@ -95,3 +95,24 @@ class InkopsLista
         Console.ReadKey();
         // En liten paus så användaren hinner läsa texten.
     }
+     static void TaBortVara(int nummer, List<string> names, List<int> prices)
+    // Den här metoden tar bort en vara från listan.
+    {if (nummer >= 0 && nummer < names.Count)
+        {
+            names.RemoveAt(nummer);
+            // Tar bort varunamnet.
+
+            prices.RemoveAt(nummer);
+            // Tar bort priset på samma plats.
+        }
+        else
+        {
+            {
+            Console.WriteLine("Ogiltigt nummer!");
+            // Om numret inte finns → felmeddelande.
+
+            Console.ReadKey();
+            // Paus så användaren hinner läsa.
+        }
+    }
+            

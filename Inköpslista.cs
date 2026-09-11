@@ -53,6 +53,6 @@ class InkopsLista
         if (int.TryParse.Parse(prisText, out int pris))
         // TryParse förösker göra om priset som text. Om inget skrivs -> tom text.
     }
-     names.Add(NamedWaitHandleOptions(;
+     names.Add(namn);
      // Lägger till varunamnet i listan.
-     
+

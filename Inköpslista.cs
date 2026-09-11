@@ -22,5 +22,18 @@ class InkopsLista
         List<int> prices = new List<int>();  
         // En lista som håller heltal. Här sparar jag priserna: 15, 32, 89.
         // Exempel: names[0] = "Mjölk" och prices[0] = 15 är samma vara.
-    }
-}
+
+        while (true)
+        // “Så länge programmet är igång, fortsätt fråga användaren och uppdatera listan.”
+        // Det är som ett spel som aldrig slutar förrän jag skriver “exit”.
+        {
+             Console.Clear(); 
+        // Rensar terminalen så det inte blir rörigt.
+
+        VisaLista(names, prices); 
+        // Anropar en metod som skriver ut hela listan + totalsumman.
+        // Det är som att säga: "Visa mig hur listan ser ut nu."
+
+        Console.Write("\nSkriv varunamn eller nummer (eller 'exit'): ");  
+        // Jag skriver ut en fråga till användaren.
+        

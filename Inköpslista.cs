@@ -17,28 +17,35 @@ class InkopsLista
         List<string> names = new List<string>();
         // En lista som håller text. Här sparar jag varunamnen: "Mjölk", "Bröd", "Ost".
         // Varje vara har samma index i båda listorna.
+        // Index betyder "platsen i listan". Listor börjar alltid på 0.
+        // Det betyder: names[0] och prices[0] hör ihop som två kolumner i ett Excel-ark.
 
         List<int> prices = new List<int>();
         // En lista som håller heltal. Här sparar jag priserna: 15, 32, 89.
+        // Exempel: names[0] = "Mjölk" och prices[0] = 15 är samma vara!
 
         while (true)
         // “Så länge programmet är igång, fortsätt fråga användaren och uppdatera listan.”
+        // Det är som ett spel som aldrig slutar förrän användaren skriver "exit".
         {
             Console.Clear();
             // Rensar terminalen så det inte blir rörigt.
 
             VisaLista(names, prices);
             // Anropar en metod som skriver ut hela listan + totalsumman.
+            // Det är som att säga: "Visa mig hur listan ser ut nu."
 
             Console.Write("\nSkriv varunamn eller nummer (eller 'exit'): ");
             // Programmet skriver en fråga till användaren.
 
             string input = Console.ReadLine() ?? "";
             // Det användaren skriver sparas i variabeln input.
+            // Om ingen text läses in används en tom text.
 
             if (input.ToLower() == "exit")
                 break;
             // Hoppar ut ur loopen → Programmet avslutas.
+            // Som att säga "Okej vi slutar nu".
 
             if (int.TryParse(input, out int nummer))
             // TryParse försöker göra om text till ett heltal.
@@ -56,12 +63,15 @@ class InkopsLista
 
     static void LäggTillVara(string namn, List<string> names, List<int> prices)
     // Den här metoden lägger till en ny vara i listan.
+    // namn = det användaren skrev (t.ex. "Mjölk")
+    // names = listan med varunamn
+    // prices = listan med priser
     {
         Console.Write("Skriv pris för varan: ");
         // Programmet frågar användaren vad varan kostar.
 
         string prisText = Console.ReadLine() ?? "";
-        // Läser in priset som text.
+        // Läser in priset som text. Om inget skrivs → tom text.
 
         if (int.TryParse(prisText, out int pris))
         // TryParse försöker göra om texten till ett heltal.
@@ -124,13 +134,16 @@ class InkopsLista
         }
 
         int total = 0;
-        // Här sparar jag totalsumman.
+        // Här sparar jag totalsumman. Jag börjar på 0 och lägger till varje pris.
 
         for (int i = 0; i < names.Count; i++)
         // En for-loop går igenom listan steg för steg.
+        // i är index → alltså platsen i listan.
+        // i = 0 betyder första varan, i = 1 andra varan, osv.
         {
             Console.WriteLine($"{i + 1}. {names[i]} - {prices[i]} kr");
-            // Ändrat: visar 1, 2, 3... istället för 0, 1, 2...
+            // Ändrat: visar 1, 2, 3.
+            // Exempel: "1. Mjölk - 15 kr"
 
             total += prices[i];
             // Lägger till priset i totalsumman.

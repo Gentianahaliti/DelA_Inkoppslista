@@ -142,7 +142,7 @@ class InkopsLista
         // i = 0 betyder första varan, i = 1 andra varan, osv.
         {
             Console.WriteLine($"{i + 1}. {names[i]} - {prices[i]} kr");
-            // Ändrat: visar 1, 2, 3.
+            // Visar 1, 2, 3.
             // Exempel: "1. Mjölk - 15 kr"
 
             total += prices[i];

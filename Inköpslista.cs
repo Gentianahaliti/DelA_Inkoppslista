@@ -3,7 +3,7 @@ using System;
 // Utan den kan jag inte skriva ut text eller läsa in text från användaren.
 
 using System.Collections.Generic;
-// Detta öppnar en extra verktygslåda som innehåller Listor.
+// Detta öppnar en extra verktygslåda som innehåller listor.
 // Listor är som flexibla lådor där jag kan lägga in saker och ta bort saker.
 // Detta behöver jag för att kunna skapa List<string> och List<int>.
 
@@ -17,22 +17,22 @@ class InkopsLista
         List<string> names = new List<string>();
         // En lista som håller text. Här sparar jag varunamnen: "Mjölk", "Bröd", "Ost".
         // Varje vara har samma index i båda listorna.
-        // Index betyder "platsen i listan". Listor börjar alltid på 0.
+        // Index betyder platsen i listan. Listor börjar alltid på 0.
         // Det betyder: names[0] och prices[0] hör ihop som två kolumner i ett Excel-ark.
 
         List<int> prices = new List<int>();
         // En lista som håller heltal. Här sparar jag priserna: 15, 32, 89.
-        // Exempel: names[0] = "Mjölk" och prices[0] = 15 är samma vara!
+        // Exempel: names[0] = "Mjölk" och prices[0] = 15 är samma vara.
 
         while (true)
-        // “Så länge programmet är igång, fortsätt fråga användaren och uppdatera listan.”
+        // Så länge programmet är igång, fortsätt fråga användaren och uppdatera listan.
         // Det är som ett spel som aldrig slutar förrän användaren skriver "exit".
         {
             Console.Clear();
             // Rensar terminalen så det inte blir rörigt.
 
             VisaLista(names, prices);
-            // Anropar en metod som skriver ut hela listan + totalsumman.
+            // Anropar en metod som skriver ut hela listan och totalsumman.
             // Det är som att säga: "Visa mig hur listan ser ut nu."
 
             Console.Write("\nSkriv varunamn eller nummer (eller 'exit'): ");
@@ -44,8 +44,8 @@ class InkopsLista
 
             if (input.ToLower() == "exit")
                 break;
-            // Hoppar ut ur loopen → Programmet avslutas.
-            // Som att säga "Okej vi slutar nu".
+            // Hoppar ut ur loopen → programmet avslutas.
+            // Som att säga: "Okej, vi slutar nu."
 
             if (int.TryParse(input, out int nummer))
             // TryParse försöker göra om text till ett heltal.
@@ -142,8 +142,7 @@ class InkopsLista
         // i = 0 betyder första varan, i = 1 andra varan, osv.
         {
             Console.WriteLine($"{i + 1}. {names[i]} - {prices[i]} kr");
-            // Visar 1, 2, 3.
-            // Exempel: "1. Mjölk - 15 kr"
+            // Visar varorna som 1, 2, 3... istället för 0, 1, 2.
 
             total += prices[i];
             // Lägger till priset i totalsumman.

@@ -1,6 +1,6 @@
 using System;
-// Det här är som att öppna en verktygslåda som innehåller allt grundläggande i C#.
-// Utan den kan jag inte skriva ut text eller läsa in text från användaren.
+// Det här är som att öppna en verktygslåda som innehåller allt grundläggande i C#. // I nya versioner av NET. läggs detta till automatsikt.
+// Utan den kan jag inte skriva ut text eller läsa in text från användaren. 
 
 using System.Collections.Generic;
 // Detta öppnar en extra verktygslåda som innehåller listor.
